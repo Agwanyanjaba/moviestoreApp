@@ -18,7 +18,7 @@ export default class EditMovie extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/v1/api/movie/'+this.props.match.params.id)
+        axios.get('https://movieapp002.herokuapp.com/v1/api/movie/'+this.props.match.params.id)
             .then(response => {
                 this.setState({movieid: response.data.movieid, movieName: response.data.movieName})
                 console.log(response+"from server to ui");
@@ -50,7 +50,7 @@ export default class EditMovie extends Component {
             status: this.state.status
         };
         console.log(obj);
-        axios.put('http://localhost:4000/v1/api/update/'+this.props.match.params.id, obj)
+        axios.put('https://movieapp002.herokuapp.com/v1/api/update/'+this.props.match.params.id, obj)
             .then(res => console.log(res.data));
         
             window.alert('Updated Movie Successfully');
