@@ -26,7 +26,7 @@ export default class MovieList extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/v1/api/allmovies')
+        axios.get('https://movieapp002.herokuapp.com/v1/api/allmovies')
             .then(response => {
                 this.setState({ movie: response.data });
             })
