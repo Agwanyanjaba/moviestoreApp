@@ -18,7 +18,7 @@ class CreateMovie extends Component{
         //define the submitHandler method
         submitHandler = e =>{
             e.preventDefault()
-            console.log(this.state+"Viraibles on submit")//log state object
+            console.log(this.state+"variable on submit")//log state object
 
            const newMovie = {
                 movieid: this.state.movieid,
