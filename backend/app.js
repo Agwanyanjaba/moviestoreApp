@@ -3,15 +3,13 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
-//const movieRoutes = express.Router();
 const Movies = require('./models/movie');
 
 app.use(cors());
 app.use(bodyParser.json());
 
 //mongoose.connect('mongodb://127.0.0.1:27017/moviestore', { useNewUrlParser: true });
-mongoose.connect('mongodb+srv://john:UHMmcfVK76txtvdn@cluster0-b6qck.mongodb.net/test?retryWrites=true&w=majority');
-
+mongoose.connect('mongodb://127.0.0.1:27017/moviestore');
 
 const connection = mongoose.connection;
 

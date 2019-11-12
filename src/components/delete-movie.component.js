@@ -18,7 +18,7 @@ export default class DeleteMovie extends Component {
     }
 
     componentDidMount() {
-        axios.get('https://movieapp002.herokuapp.com/v1/api/movie/'+this.props.match.params.id)
+        axios.get('http://localhost:4000/v1/api/movie/'+this.props.match.params.id)
             .then(response => {
                 this.setState({movieid: response.data.movieid, movieName: response.data.movieName})
                 

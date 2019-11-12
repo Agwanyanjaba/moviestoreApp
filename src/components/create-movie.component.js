@@ -27,7 +27,7 @@ class CreateMovie extends Component{
                 status: this.state.status
             };
 
-            axios.post('https://movieapp002.herokuapp.com/v1/api/add', newMovie)
+            axios.post('http://localhost:4000/v1/api/add', newMovie)
             .then(res => console.log(this.state+"response from server"))
             .catch((error=>{
                 console.log(error)
