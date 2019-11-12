@@ -10,7 +10,8 @@ app.use(cors());
 app.use(bodyParser.json());
 
 //mongoose.connect('mongodb://127.0.0.1:27017/moviestore', { useNewUrlParser: true });
-mongoose.connect('mongodb+srv://john:kga4aRiwU2OVrpcB@cluster0-b6qck.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connect('mongodb+srv://john:UHMmcfVK76txtvdn@cluster0-b6qck.mongodb.net/test?retryWrites=true&w=majority');
+
 
 const connection = mongoose.connection;
 
