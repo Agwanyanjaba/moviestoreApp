@@ -50,7 +50,7 @@ export default class DeleteMovie extends Component {
             status: this.state.status
         };
         console.log(obj);
-        axios.delete('https://movieapp002.herokuapp.com/v1/api/delete/'+this.props.match.params.id, obj)
+        axios.delete('http://localhost:4000/v1/api/delete/'+this.props.match.params.id, obj)
             .then(res => console.log(res.data));
         
             window.alert('Deleted Movie Successfully!');

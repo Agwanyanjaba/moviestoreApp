@@ -1,12 +1,13 @@
 const express = require('express');
-const app = express();
+const moviesapp = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const Movies = require('./models/movie');
+const MoviesRouter = require('./routes/movies.routes');
 
-app.use(cors());
-app.use(bodyParser.json());
+moviesapp.use(cors());
+moviesapp.use(bodyParser.json());
 
 //mongoose.connect('mongodb://127.0.0.1:27017/moviestore', { useNewUrlParser: true });
 mongoose.connect('mongodb://127.0.0.1:27017/moviestore');
@@ -17,7 +18,7 @@ connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
 })
 
-
+/*
 //Get all movies API
 app.get('/v1/api/allmovies', (req, res, next) =>{
     Movies.find().then(
@@ -106,6 +107,7 @@ app.post('/v1/api/add', (req, res, next) => {
     });
 });
 
+*/
+moviesapp.use('', MoviesRouter);
 
-
-module.exports = app;
+module.exports = moviesapp;
